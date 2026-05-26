@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 // ─── CONFIGURATION ───────────────────────────────────────────────────────────
-const STRIPE_PUBLISHABLE_KEY = 'pk_test_51TZtttIpu18sCs4Y9EgJQ1FkOdTulN1JM1HfmiZ2SbyhfF2JAOjOOrEG71iRB6cegtjek9Z6LATLAQQ1Cm8cJqgl001XY1TJio';
+const STRIPE_PUBLISHABLE_KEY = 'pk_live_51TbRfSLVwXApC0KTujOLQKRgZGCVafPJtV9Te3k7652xWXOb6Kqzw0jffxvHG8gbqWCzZJ5CMd56rd25F450I7V200zB3DA0DG';
 const BACKEND_URL = '/api/subscribe';
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -13,7 +13,7 @@ const TIERS = [
     price: 20,
     tag: null,
     telegram: "https://t.me/+XJ8v-0xXDkw0M2Q0",
-    priceId: "price_1TZxpGCev00iOONMCJwcWS0E",
+    priceId: "price_1TbRrOLVwXApCOKTsWBvtjPg",
     features: [
       "Access to Starter Telegram group",
       "Nutritional advice on foods to avoid & best foods to eat",
@@ -29,7 +29,7 @@ const TIERS = [
     price: 60,
     tag: "Most Popular",
     telegram: "https://t.me/+fnG9UT2Y4pIyYTM0",
-    priceId: "price_1TZy8JCev00iOONMEKHhCfZQ",
+    priceId: "price_1TbRroLVwXApCOKTbUibTemt",
     features: [
       "Everything in Starter",
       "Access to Mid Tier Telegram group",
@@ -47,7 +47,7 @@ const TIERS = [
     price: 200,
     tag: "Premium",
     telegram: "https://t.me/+GICMiLOsc2c3MmRk",
-    priceId: "price_1TZy8xCev00iOONM7oiZKXSB",
+    priceId: "price_1TbRsPLVwXApCOKTISQPe23i",
     features: [
       "Everything in Mid Tier",
       "Private 1-1 Telegram access with Raf",
