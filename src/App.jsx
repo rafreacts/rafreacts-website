@@ -7,8 +7,8 @@ const TIERS = [
     name: "Starter",
     price: 20,
     tag: null,
-    telegram: "https://t.me/YOUR_STARTER_GROUP",
-    priceId: "price_YOUR_STARTER_PRICE_ID",
+    telegram: "https://t.me/+XJ8v-0xXDkw0M2Q0",
+    priceId: "price_1TZxpGCev00iOONMCJwcWS0E",
     features: [
       "Access to Starter Telegram group",
       "Nutritional advice on foods to avoid & best foods to eat",
@@ -23,8 +23,8 @@ const TIERS = [
     name: "Mid Tier",
     price: 60,
     tag: "Most Popular",
-    telegram: "https://t.me/YOUR_MID_GROUP",
-    priceId: "price_YOUR_MID_PRICE_ID",
+    telegram: "https://t.me/+fnG9UT2Y4pIyYTM0",
+    priceId: "price_1TZy8JCev00iOONMEKHhCfZQ",
     features: [
       "Everything in Starter",
       "Access to Mid Tier Telegram group",
@@ -41,8 +41,8 @@ const TIERS = [
     name: "Elite 1-1",
     price: 200,
     tag: "Premium",
-    telegram: "https://t.me/YOUR_ELITE_GROUP",
-    priceId: "price_YOUR_ELITE_PRICE_ID",
+    telegram: "https://t.me/+GICMiLOsc2c3MmRk",
+    priceId: "price_1TZy8xCev00iOONM7oiZKXSB",
     features: [
       "Everything in Mid Tier",
       "Private 1-1 Telegram access with Raf",
