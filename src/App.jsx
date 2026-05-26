@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 // ─── CONFIGURATION ───────────────────────────────────────────────────────────
 const STRIPE_PUBLISHABLE_KEY = 'pk_test_51TZtttIpu18sCs4Y9EgJQ1FkOdTulN1JM1HfmiZ2SbyhfF2JAOjOOrEG71iRB6cegtjek9Z6LATLAQQ1Cm8cJqgl001XY1TJio';
-const BACKEND_URL = 'https://rafreacts-server-production.up.railway.app/subscribe';
+const BACKEND_URL = '/api/subscribe';
 // ─────────────────────────────────────────────────────────────────────────────
 
 const TIERS = [
@@ -118,6 +118,7 @@ export default function App() {
         });
 
         const card = elements.create('card', {
+          hidePostalCode: true,
           style: {
             base: {
               color: '#f5f0e8',
@@ -134,8 +135,14 @@ export default function App() {
           if (cardMountRef.current && !cancelled) {
             card.mount(cardMountRef.current);
             cardElementRef.current = card;
+            // Force focus after mount
+            setTimeout(() => {
+              if (cardElementRef.current) {
+                cardElementRef.current.focus();
+              }
+            }, 200);
           }
-        }, 100);
+        }, 300);
 
       } catch (e) {
         console.error('Stripe init error:', e);
@@ -408,6 +415,7 @@ export default function App() {
             background: "#111", border: "1px solid #222", borderTop: "2px solid #c9a84c",
             borderRadius: 4, width: "100%", maxWidth: 460,
             padding: "40px 36px", position: "relative", maxHeight: "90vh", overflowY: "auto",
+            zIndex: 501,
           }}>
             <button onClick={closeModal} style={{ position: "absolute", top: 16, right: 20, background: "none", border: "none", color: "#555", fontSize: 26, cursor: "pointer", lineHeight: 1 }}
               onMouseEnter={e => e.target.style.color = "#fff"} onMouseLeave={e => e.target.style.color = "#555"}>×</button>
@@ -441,7 +449,11 @@ export default function App() {
                 {/* Real Stripe Card Element */}
                 <div style={{ marginBottom: 8 }}>
                   <label style={{ display: "block", fontSize: 10, letterSpacing: 2, textTransform: "uppercase", color: "#555", marginBottom: 8 }}>Card Details</label>
-                  <div ref={cardMountRef} style={{ background: "#1a1a1a", border: "1px solid #252525", borderRadius: 2, padding: "14px 16px", minHeight: 46 }} />
+                  <div
+                    ref={cardMountRef}
+                    onClick={() => cardElementRef.current && cardElementRef.current.focus()}
+                    style={{ background: "#1a1a1a", border: "1px solid #252525", borderRadius: 2, padding: "14px 16px", minHeight: 46, cursor: "text" }}
+                  />
                 </div>
 
                 {error && <p style={{ color: "#e03030", fontSize: 12, marginBottom: 8, marginTop: 8 }}>{error}</p>}
