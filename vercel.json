@@ -1,5 +1,8 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "build",
-  "framework": "create-react-app"
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://rafreacts-server-production.up.railway.app/:path*"
+    }
+  ]
 }
