@@ -1,4 +1,4 @@
-mport { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // ─── CONFIGURATION ───────────────────────────────────────────────────────────
 const STRIPE_PUBLISHABLE_KEY = 'pk_test_51TZtttIpu18sCs4Y9EgJQ1FkOdTulN1JM1HfmiZ2SbyhfF2JAOjOOrEG71iRB6cegtjek9Z6LATLAQQ1Cm8cJqgl001XY1TJio';
