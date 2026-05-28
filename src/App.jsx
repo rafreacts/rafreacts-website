@@ -12,7 +12,7 @@ const TIERS = [
     name: "Starter",
     price: 20,
     tag: null,
-    telegram: "https://t.me/+XJ8v-0xXDkw0M2Q0",
+    telegram: "https://t.me/+nS1oVA4OV2pjZGVk",
     priceId: "price_1TbRr0LVwXApC0KTsWBvtjPg",
     features: [
       "Access to Starter Telegram group",
@@ -28,7 +28,7 @@ const TIERS = [
     name: "Mid Tier",
     price: 60,
     tag: "Most Popular",
-    telegram: "https://t.me/+fnG9UT2Y4pIyYTM0",
+    telegram: "https://t.me/+mWOnk1ALZYBhNDlk",
     priceId: "price_1TbRroLVwXApC0KTbUibTemt",
     features: [
       "Everything in Starter",
@@ -46,7 +46,7 @@ const TIERS = [
     name: "Elite 1-1",
     price: 200,
     tag: "Premium",
-    telegram: "https://t.me/+GICMiLOsc2c3MmRk",
+    telegram: "https://t.me/+FuIFdE-baqU4YWM0",
     priceId: "price_1TbRsPLVwXApC0KTlSQPe23i",
     features: [
       "Everything in Mid Tier",
